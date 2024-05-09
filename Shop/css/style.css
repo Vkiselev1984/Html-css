@@ -1,0 +1,370 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Bold'), local('Bold'),
+        url('/fonts/Gilroy-Bold/Gilroy-Bold.woff2') format('woff2'),
+        url('/fonts/Gilroy-Bold/Gilroy-Bold.woff') format('woff'),
+        url('/fonts/Gilroy-Bold/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: local('Semibold'), local('Semibold'),
+        url('Gilroy-Semibold.woff2') format('woff2'),
+        url('Gilroy-Semibold.woff') format('woff'),
+        url('Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+ 
+  header {
+    color: #000000;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 137px 533px auto;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+
+  header > a, header > nav > ul > li > a {
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+
+header > a > img {
+    width: 35px;
+    height: 40px;
+}
+
+header > a > span  {
+    color:#F25822;
+}
+
+
+
+.buttons {
+    width: 302px;
+    display: flex;
+    justify-content: space-between;
+    }
+
+.buttons > a > span > img {
+    width: 15px;
+    height: 15px;
+    margin: 7px 0;
+}
+
+.buttons > a > span {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 18px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #d4d4d4;
+}
+
+.buttons > a {
+    font-family: 'Gilroy-Bold', sans-serif;
+    text-decoration: none;
+    width: 135px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #AAAAAA;
+}
+
+header > nav > ul, section > ul {
+       font-size: 14px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+section, header {
+    max-width: 1170px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+section > .left > p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    line-height: 23.44px;
+    color: #AAAAAA;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #F25822;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+}
+
+.left {
+    width: 543px;
+    height: 374px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.left > h1 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    
+}
+
+.left > h2 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0;
+    
+}
+
+.right > img {
+    margin-top: 100px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.card > li:hover {
+    box-shadow: 15px 25px 56px 6px #0000000F;
+
+}
+
+.card > li {
+    width: 310px;
+    padding: 20px;
+}
+
+.card > li > h3 {
+
+    font-size: 24px;
+    line-height: 28.13px;
+    text-align: left;
+    
+}
+
+.card > li > a {
+font-size: 11px;
+line-height: 16.5px;
+text-align: left;
+font-weight: bold;
+text-decoration: none;
+    color: #000000;    
+}
+
+#advantages > .card > li > img {
+    width: 27.78px;
+    height: 25px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#advantages > .card > li:first-child > img {
+    background-color: #F2582240;
+}
+
+#advantages > .card > li:nth-child(2) > img {
+    background-color: #14921147;
+}
+
+#advantages > .card > li:nth-child(3) > img {
+    background-color: #FFCD1D3D;
+}
+
+.banner > .right > .card > li:first-child > img {
+    background-color: #F2582240;
+}
+
+.banner > .right > .card > li:nth-child(2) > img {
+    background-color: #14921147;
+}
+
+.banner > .right > .card > li:nth-child(3) > img {
+    background-color: #FFCD1D3D;
+}
+
+#choose, #plans {
+    display: flex;
+    justify-content: center;
+}
+
+#choose > .card > li > img {
+    width: 100%;
+    height: 270px;
+}
+
+#choose > .card > li, #choose > .card > li > h3 {
+    text-align: center;
+}
+
+
+
+#check > .right > img  {
+    width: 600px;
+}
+
+#check > .left > .buttons  {
+    width: 400px;
+}
+
+
+.banner {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.banner > .left {
+    width: 40%;
+}
+
+.banner > .left > img {
+    width: max-content;
+}
+
+.banner > .right {
+    width: 40%;
+}
+
+.banner > .right >.card > li > img {
+    padding: 40px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.banner > .right >.card > li > div {
+    height: 90px;
+}
+
+
+
+.banner > .right > ul {
+        list-style-type: none;
+    padding: 0px;
+}
+
+.banner > .right > ul > li {
+    display: flex;
+    width: 100%;
+    
+}
+
+.banner > .right >.card > li > p {
+    width: 100%;
+}
+
+form  {
+    display: flex;
+}
+
+form > button {
+    margin-left: 60px;
+}
+
+.formleft {
+    width: 150px;
+    text-align: center;
+height: 35px;
+border: 0px;
+border-radius: 50px 0px 0px 50px;
+background: #EEEEEE;
+
+}
+
+.formright {
+    width: 150px;
+    text-align: center;
+height: 35px;
+border: 0px;
+border-left: 1.5px solid #CCCCCC;
+border-radius: 0px 50px 50px 0px;
+background: #EEEEEE;
+
+}
+
+#plans > h2, #experts > h2, #experts > p  {
+   width: 100%;
+   text-align: center;
+}
+
+#plans > ul > li > p, #experts > ul > li > p {
+text-align: center;
+display: flex;
+justify-content: center;
+}
+
+
+#plans > ul > li {
+text-align: center;
+display: grid;
+justify-content: center;
+}
+
+
+#experts > ul > li {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    }
+
+    #experts > .card > li {
+        width: 100%;
+    }
+
+    footer > section > ul > li:first-child{
+width: 200px;
+    }
+
+    footer > section > ul > li > h3 {
+        font-weight: bold;
+            font-size: 24px;
+        }
+
+        footer > section > ul > li {
+            font-size: 14px;
+            
+
+        }
+
+        footer > section > ul > li> ul > li::marker {
+            list-style-type: circle;
+            color: hotpink;
+          }
+          
+         
