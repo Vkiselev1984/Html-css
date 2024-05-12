@@ -1,13 +1,72 @@
-@media (min-width: 1280px) {
-    section>.container>img {
-        width: 40%;
-
-    }
-
+@media (max-width: 660px) {
 
 }
 
-@media (max-width: 1280px) {
+
+@media (max-width: 960px) {
+
+    .features > ul > li > img {
+        width: 120px;
+    }
+
+    .card, .features > ul {
+               grid-template-columns: max-content;
+           }
+
+           .card >li {
+            max-width: none;
+        }
+    .banner>.container> img {
+        display: none;
+
+    }
+
+    .seo>.container>img {
+        display: none;
+    }
+
+    .seo>.container {
+                justify-content: start;
+    }
+
+    .seo>.container>.content {
+        max-width: none;
+    }
+
+    .banner>.container> content {
+        width: 100%;
+    }
+    .color-disc {
+        width: 100%;
+        font-size: 40px;
+    }
+    section, header, footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 960px;
+    }
+
+    .container {
+        width: calc(100% - 74px);
+        margin: 40px auto;
+        flex-wrap: wrap;
+    }
+    .card {
+        width: calc(100% - 74px);
+        margin: 40px auto;}
+
+        footer>section>.container>.card {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            display: grid;
+            justify-content: space-between;
+            max-width: 960px;
+            }
+}
+
+
+
+@media (max-width: 1980px) {
     section>.container>img {
         width: 40%;
 
@@ -20,7 +79,47 @@
 }
 
 @media (max-width: 1280px) {
+    footer>section>.container>.card {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: grid;
+    justify-content: space-between;
+    max-width: 1280px;
+    }
+    .banner>.container> img {
+        display: none;
 
+    }
+    .color-disc {
+        width: 100%;
+        font-size: 40px;
+    }
+    .seo>.container>img {
+        display: none;
+    }
+
+    .seo>.container {
+        justify-content: start;
+}
+.seo>.container>.content {
+    max-width: none;
+}
+    .container {
+        width: calc(100% - 174px);
+        margin: 40px auto;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(100% - 174px);
+        margin: 40px auto;
+    }
+
+    section, header, footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1280px;
+    }
 
     .content>p {
         width: 80%;
