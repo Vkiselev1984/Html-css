@@ -1,86 +1,10 @@
-@media (max-width: 1600px) {
-    
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Lato;
-    
-    }
-
-header {
-    
-    background-color: #222222;
-    height: 75px;
-    margin: 0 auto;
-}
-
-.header-container {
-    margin: 0 auto;
-    padding: 18px auto;
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-    grid-template-columns: 110px auto;
-}
-
-.logo-frame {
-    width: 111px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.search-bar {
-    flex: 1;
-    margin: 0 20px;
-    display: block;
-    position: absolute;
-    left: 400px;
-}
-
-.search-bar > input {
-    height: 30px;
-    width: 300px;
-    border: 0px;
-    border-radius: 20px;
-    background-color: #F1E4E6;
-}
-
-.search-bar > input {
-    text-indent: 30px;
-}
-
-.search-bar > input:focus {
-    outline: none; 
-}
+@media (max-width: 1599px) {
 
 .menu-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 159px;
-}
-
-.mobmenu {
-    display: block;
-}
-
-.burger-checkbox {
-    position: absolute;
-    visibility: hidden;
-}
-
-.burger {
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    display: block;
-    position: relative;
-    border: none;
-    background: transparent;
-    width: 40px;
-    height: 26px;
 }
 
 .burger::before,
@@ -95,17 +19,6 @@ header {
     background: #E8E8E8;
 }
 
-.burger::before {
-    top: 0;
-    box-shadow: 0 11px 0 #E8E8E8;
-    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
-}
-
-.burger::after {
-    bottom: 0;
-    transition: bottom .3s .15s, transform .3s;
-}
-
 .burger-checkbox:checked+.burger::before {
     top: 11px;
     transform: rotate(45deg);
@@ -114,24 +27,16 @@ header {
     transition: box-shadow .15s, top .3s, transform .3s .15s;
 }
 
-.burger-checkbox:checked+.burger::after {
-    bottom: 11px;
-    transform: rotate(-45deg);
-    transition: bottom .3s, transform .3s .15s;
-}
-
 .menu-list {
     top: 75px;
     left: 0;
-    position: absolute;
-    display: grid;
+    margin: 0;
     gap: 2px;
     padding: 0 230px;
-    background: rgb(255, 255, 255);
+    background: #F1E4E6;
     list-style-type: none;
     transform: translateX(-140%);
     transition: .3s;
-    width: 1140px;
 }
 
 .menu-item {
@@ -145,24 +50,8 @@ header {
 }
 
 .menu-item:hover {
-    background: #F1E4E6;
-    color: #414141;
+    color: #F16D7F;
     font-weight: 700;
 }
-
-.burger-checkbox:checked~.menu-list {
-    transform: translateX(0);
-}
-
-.partners>.container>ul>li {
-    margin-top: 10px;
-}
-
-.content {
-    
-    margin: 0 auto;
-    padding: 20px;
-}
-
 
 }
