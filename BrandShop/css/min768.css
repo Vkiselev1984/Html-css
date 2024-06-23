@@ -1,5 +1,57 @@
 @media screen and (max-width: 768px) {
     .item-last {
-        flex: 0 0 100%; /* на узких экранах элемент будет занимать всю ширину */
+        flex: 0 0 100%;
            }
 }
+
+@media (min-width: 320px) and (max-width: 1216px) {
+    
+.menu-icons {
+    justify-content: end;
+}
+
+    .menu-icons > svg {
+        display: none;
+    }
+
+    .banner>.foto {
+        display: none;
+    }
+
+    .header-container, .categories, .banner, .products {
+    padding: 16px;
+    }
+    .banner > .text > p {
+        margin-left: 56px;
+    }
+
+    .banner {
+        grid-template-columns: 100%;
+        height: 363px;
+    }
+
+    .categories > ul > .item {
+        flex: 100%;
+    }
+
+    .product-item> img{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 418px;
+    }
+
+    .products > ul > .product-item {
+        flex: 0 0 100%;
+    }
+
+    .menu-list {
+      right: 0px;
+      width: 100%;
+    top: 110px;
+    }
+
+    .product-item > h3, .product-item > p {
+        width: 100%;
+    }
+ }
