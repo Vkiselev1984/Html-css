@@ -4,27 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог</title>
+    <title>Catalog</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <header>
-        <img src="../img/logo.jpg" alt="Image Description" widht="100" height="100">
-        <p>New_site</p>
-        <details>
-            <summary>Меню</summary>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="./catalog.html" class="active">Каталог</a></li>
-                    <li><a href="../contacts.html">Контакты</a></li>
-                </ul>
-            </nav>
-        </details>
+        <div>
+            <img src="../img/logo.jpg" alt="Image Description" widht="100" height="100">
+            <p>Cosmetics for body and soul</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="menu-link">Home</a></li>
+                <li><a href="./catalog.html" class="menu-link active">Catalog</a></li>
+                <li><a href="../contacts.html" class="menu-link">Contscts</a></li>
+            </ul>
+        </nav>
 
     </header>
-    <h1>Каталог</h1>
+    <h1 class="main-heading">Catalog</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis et sequi a ipsa magnam? Sunt exercitationem
         voluptas ea suscipit, esse praesentium voluptate alias libero earum dolorum. Dolor odit dolores neque error,
         provident, iure laborum rem iste, est delectus pariatur esse. Deleniti dolorum iusto aliquid libero reiciendis
@@ -36,25 +35,27 @@
         Voluptates, consectetur amet vel ex quo nihil tenetur perspiciatis provident molestiae temporibus omnis, modi
         velit consequuntur rerum ducimus maiores voluptatibus ut ab aperiam, maxime cum. Voluptas esse impedit dicta
         molestias magni dolorum consectetur, obcaecati odio.</p>
-    <div class="product-card">
-        <img src="../img/product1.jpg" alt="Название товара 1">
-        <h2>Название товара 1</h2>
-        <p>Описание товара 1</p>
-    </div>
+    <section class="products-section">
+        <div class="product-card">
+            <img src="../img/product1.jpg" alt="Perfume oils">
+            <h2 class="section-heading">Perfume oils</h2>
+            <p>A blend of perfume oils inspired by the famous scent</p>
+        </div>
 
-    <div class="product-card">
-        <img src="../img/product2.jpg" alt="Название товара 2">
-        <h2>Название товара 2</h2>
-        <p>Описание товара 2</p>
-    </div>
+        <div class="product-card">
+            <img src="../img/product2.jpg" alt="Cosmetic sets">
+            <h2 class="section-heading">Cosmetic sets</h2>
+            <p>Cosmetic sets for home and travel</p>
+        </div>
 
-    <div class="product-card">
-        <img src="../img/product3.jpg" alt="Название товара 3">
-        <h2>Название товара 3</h2>
-        <p>Описание товара 3</p>
-    </div>
+        <div class="product-card">
+            <img src="../img/product3.jpg" alt="Creams">
+            <h2 class="section-heading">Creams</h2>
+            <p>Creams for all occasions</p>
+        </div>
+    </section>
     <footer>
-        <p>© 2024. Все права защищены.</p>
+        <p>© 2024. All rights reserved.</p>
     </footer>
 </body>
 
