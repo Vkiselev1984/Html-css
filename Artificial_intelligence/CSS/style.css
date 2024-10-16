@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1920px;
+    background: rgba(2, 10, 24, 1);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    scroll-behavior: smooth;
+}
+
+
+
+header {
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    background: rgba(2, 10, 24, 0.95);
+    color: rgba(255, 255, 255, 1);
+}
+
+nav>ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.79px;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 1);
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 411px;
+    height: 22px;
+}
+
+section {
+    max-width: 1146px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 90px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.about {
+    flex-direction: row;
+}
+
+.container {
+    width: 604px;
+}
+
+.container p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28.8px;
+    text-align: left;
+    color: rgba(58, 104, 184, 1);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 71.5px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    text-align: left;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+h3 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.container>p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28.8px;
+    color: rgb(182 182 182);
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(58, 104, 184, 1);
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    font-family: Open Sans;
+}
+
+button>img {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+button>a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    line-height: 27px;
+    gap: 10px;
+    display: flex;
+}
+
+.btn {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.banners {
+    gap: 30px;
+    padding: 90px;
+}
+
+.banners>img {
+    max-width: 200px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 362px);
+    gap: 32px;
+    justify-content: center;
+    align-items: normal;
+}
+
+.item,
+.item_big {
+    font-family: Open Sans;
+    background: #132035;
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+}
+
+.item_big {
+    grid-column: span 2;
+    grid-row: span 2;
+    gap: 60px;
+}
+
+.item_heading {
+    font-family: Open Sans;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 31.25px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.item_text {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25.6px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.blog>img {
+    width: 490px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 32px;
+    margin: 0 auto;
+    max-width: 1146px;
+    padding: 90px;
+}
+
+.footer_column_item {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.footer_column_item>p {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer_column:nth-of-type(2) p,
+.footer_column:nth-of-type(3) p {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 16.41px;
+    color: rgb(182 182 182);
+    width: 261px;
+    margin-top: 30px;
+}
+
+.footer_column:nth-of-type(3) p {
+    color: rgba(255, 255, 255, 1);
+}
+
+.social_icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
