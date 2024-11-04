@@ -1,0 +1,40 @@
+@media (max-width: 540px) {
+    .goods {
+        padding: 32px 0 85px;
+    }
+
+    .goods__container {
+        padding: 0 8px;
+    }
+
+    .goods__item {
+        flex-basis: 359px;
+    }
+
+    .header-menu {
+        width: 100%;
+        right: -550px;
+        margin-top: 20px;
+    }
+
+    .header__container {
+        flex-wrap: wrap;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .header__container {
+        justify-content: space-between;
+    }
+
+    .header__nav .nav__link:nth-child(2) {
+        display: none;
+    }
+
+    .header__nav .nav__link:nth-child(3) {
+        display: none;
+    }
+
+}

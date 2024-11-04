@@ -1,0 +1,90 @@
+@media (max-width: 992px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero__container {
+        gap: 40px;
+    }
+
+    .hero__title {
+        padding-bottom: 14px;
+        font-size: 24px;
+    }
+
+    .black-weight {
+        font-size: 44px;
+    }
+
+    .offer__container {
+        gap: 20px;
+    }
+
+    .offer__items {
+        min-height: 167px;
+    }
+
+    .offer__item_4 {
+        min-height: 116px;
+    }
+
+    .goods {
+        padding: 70px 0;
+    }
+
+    .goods__list {
+        gap: 16px;
+    }
+
+    .goods__item {
+        flex: 1 1 calc(50% - 8px);
+    }
+
+    .features {
+        padding: 48px 0 64px;
+    }
+
+    .features__list {
+        flex-wrap: wrap;
+    }
+
+    .features__item {
+        flex-basis: 100%;
+    }
+
+    .features__item-description {
+        max-width: 360px;
+    }
+
+    .subscribe {
+        padding: 64px 0 140px;
+        background-position: left;
+    }
+
+    .subscribe__container {
+        flex-direction: column;
+        gap: 48px;
+        align-items: center;
+    }
+
+    .subscribe__review {
+        max-width: 360px;
+        flex-basis: auto;
+    }
+
+    .subscribe__content {
+        flex-basis: auto;
+    }
+
+    .subscribe__description {
+        margin-bottom: 27px;
+    }
+
+    .subscribe__form {
+        display: block;
+        width: 100%;
+        max-width: 356px;
+    }
+
+
+}
