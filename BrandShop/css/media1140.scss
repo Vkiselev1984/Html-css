@@ -1,6 +1,6 @@
-@media (max-width: 992px) {
+@media (max-width: 1140px) {
     .container {
-        padding: 0 16px;
+        padding: 0 8px;
     }
 
     .hero__container {
@@ -10,6 +10,15 @@
     .hero__title {
         padding-bottom: 14px;
         font-size: 24px;
+    }
+
+    .header-menu {
+        width: 100% !important;
+        right: -100% !important;
+    }
+
+    .show {
+        right: 0 !important;
     }
 
     .black-weight {
@@ -86,5 +95,25 @@
         max-width: 356px;
     }
 
+    .summary__list.active {
+        left: 8px !important;
+    }
 
+    .filters__single-details {
+        width: 100%;
+    }
+
+    .filters__details {
+        width: 100% !important;
+    }
+
+    .summary__list {
+        width: 100% !IMPORTANT;
+        left: 0px ! IMPORTANT;
+        position: static !IMPORTANT;
+    }
+
+    .filters__container {
+        height: auto;
+    }
 }

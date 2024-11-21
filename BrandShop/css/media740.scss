@@ -8,7 +8,7 @@
 
 
     .banner__container {
-        min-height: 363px;
+        min-height: 80px;
     }
 
     .banner__image {
@@ -20,6 +20,8 @@
         font-size: 20px;
         max-width: 263px;
         margin: 0 auto;
+        margin-top: 120px;
+        margin-bottom: 120px;
     }
 
     .black-weight {
@@ -75,4 +77,28 @@
         flex-direction: column-reverse;
         gap: 40px;
     }
+
+    .summary__list.active {
+        left: 8px !important;
+    }
+
+    .filters__single-details {
+        width: 100%;
+    }
+
+    .filters__details {
+        width: 100% !important;
+    }
+
+    .summary__list {
+        width: 100%;
+        left: 0px ! IMPORTANT;
+        position: static !IMPORTANT;
+    }
+
+    .filters__container {
+        height: auto;
+    }
+
+
 }
