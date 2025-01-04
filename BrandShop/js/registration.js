@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
+    const form = document.getElementById('registration-form');
 
     if (!form) {
         console.error('Form element not found.');
@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault();
+        event.preventDefault(); // Предотвращаем стандартное поведение формы
 
+        // Собираем данные формы
         const firstName = document.getElementById('first-name');
         const lastName = document.getElementById('last-name');
         const gender = document.querySelector('input[name="gender"]:checked');
@@ -28,8 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
             password: password.value
         };
 
-        // Измените URL на правильный адрес
-        fetch('http://127.0.0.1:5500/registration.html', {
+        console.log('User data to be sent:', userData);
+
+        fetch('http://127.0.0.1:5500/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(userData),
         })
             .then(response => {
+                console.log('Response status:', response.status);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
