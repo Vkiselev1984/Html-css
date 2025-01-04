@@ -1,7 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const filterSummary = document.querySelector('.details__summary');
     const summaryList = document.querySelector('.summary__list');
+
+    // Проверяем, что элементы существуют
+    if (!filterSummary || !summaryList) {
+        console.error('Required elements not found in the DOM for submenu.js.');
+        return;
+    }
+
     const filtersDetails = filterSummary.closest('.filters__details');
+
+    // Проверяем, что filtersDetails существует
+    if (!filtersDetails) {
+        console.error('Parent element with class "filters__details" not found in submenu.js.');
+        return;
+    }
 
     filterSummary.addEventListener('click', function (event) {
         event.preventDefault();
@@ -27,11 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (dropdown && dropdown.classList.contains('summary__dropdown_list')) {
                 dropdown.classList.toggle('active');
                 if (this.closest('.filters__single-details')) {
-                    if (dropdown.classList.contains('active')) {
-                        filtersDetails.style.boxShadow = '6px 4px 35px 0px rgba(0, 0, 0, 0.21)';
-                    } else {
-                        filtersDetails.style.boxShadow = '';
-                    }
+                    filtersDetails.style.boxShadow = dropdown.classList.contains('active') ? '6px 4px 35px 0px rgba(0, 0, 0, 0.21)' : '';
                 }
             }
         });
@@ -43,17 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
         summary.addEventListener('click', function (event) {
             event.preventDefault();
             const dropdownList = this.nextElementSibling;
-            const filtersDetails = this.closest('.filters__details');
-
             if (dropdownList && dropdownList.classList.contains('filters__dropdown_list')) {
                 dropdownList.classList.toggle('active');
                 this.classList.toggle('active');
                 if (this.closest('.filters__multiple-details')) {
-                    if (dropdownList.classList.contains('active')) {
-                        dropdownList.style.boxShadow = '6px 4px 35px 0px rgba(0, 0, 0, 0.21)';
-                    } else {
-                        dropdownList.style.boxShadow = '';
-                    }
+                    dropdownList.style.boxShadow = dropdownList.classList.contains('active') ? '6px 4px 35px 0px rgba(0, 0, 0, 0.21)' : '';
                 }
             }
         });
