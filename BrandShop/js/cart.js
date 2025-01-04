@@ -5,27 +5,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const subtotalElement = document.querySelector('.cart__checkout-subtotal');
     const grandtotalElement = document.querySelector('.cart__checkout-grandtotal');
 
-    // Функция для обновления счетчика
     function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         cartCount.textContent = cart.length;
     }
 
-    // Функция для вычисления и отображения сумм
     function calculateTotals() {
         let subtotal = 0;
-
-        // Суммируем цены всех товаров в корзине
         cart.forEach(item => {
-            subtotal += item.price * (item.quantity || 1); // Учитываем количество
+            subtotal += item.price * (item.quantity || 1);
         });
 
-        // Обновляем элементы на странице
         subtotalElement.innerHTML = `<span>SUB TOTAL</span> $${subtotal.toFixed(2)}`;
-        grandtotalElement.innerHTML = `<span>GRAND TOTAL</span> $${subtotal.toFixed(2)}`; // Если нет дополнительных сборов
+        grandtotalElement.innerHTML = `<span>GRAND TOTAL</span> $${subtotal.toFixed(2)}`;
     }
 
-    // Обновляем счетчик при загрузке страницы корзины
     updateCartCount();
 
     if (cart.length === 0) {
@@ -33,16 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
         subtotalElement.innerHTML = `<span>SUB TOTAL</span> $0.00`;
         grandtotalElement.innerHTML = `<span>GRAND TOTAL</span> $0.00`;
     } else {
-        // Объект для хранения уникальных товаров и их количеств
         const uniqueItems = {};
 
-        // Сгруппируем товары по их идентификатору или названию
         cart.forEach(item => {
-            const key = item.id || item.title; // Используем id или title как ключ
+            const key = item.id || item.title;
             if (uniqueItems[key]) {
-                uniqueItems[key].quantity += item.quantity || 1; // Увеличиваем количество, если оно есть
+                uniqueItems[key].quantity += item.quantity || 1;
             } else {
-                uniqueItems[key] = { ...item, quantity: item.quantity || 1 }; // Копируем товар и устанавливаем quantity
+                uniqueItems[key] = { ...item, quantity: item.quantity || 1 };
             }
         });
 
@@ -64,11 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
             cartList.appendChild(listItem);
         });
 
-        // Вычисляем и отображаем суммы
         calculateTotals();
     }
 
-    // Обработчик события для удаления товара
     cartList.addEventListener('click', function (event) {
         if (event.target.classList.contains('cart__item-remove')) {
             const itemId = event.target.getAttribute('data-id');
@@ -80,24 +70,21 @@ document.addEventListener('DOMContentLoaded', function () {
         const updatedCart = cart.filter(item => (item.id || item.title) !== itemId);
         localStorage.setItem('cart', JSON.stringify(updatedCart));
 
-        // Удаляем элемент из DOM
         const itemElement = cartList.querySelector(`.cart__item-remove[data-id="${itemId}"]`).closest('li');
         if (itemElement) {
             cartList.removeChild(itemElement);
         }
 
-        // Проверяем, пуста ли корзина
         if (updatedCart.length === 0) {
             cartList.innerHTML = '<li class="empty-cart-message">Your cart is empty</li>';
         }
 
-        // Обновляем счетчик и суммы
         updateCartCount();
         calculateTotals();
     }
     function clearCart() {
         localStorage.removeItem('cart');
-        cartList.innerHTML = '<li class="empty-cart-message">Your cart is empty</li>'; // Применяем класс для стилизации
+        cartList.innerHTML = '<li class="empty-cart-message">Your cart is empty</li>';
         cartCount.textContent = '0';
         subtotalElement.innerHTML = `<span>SUB TOTAL</span> $0.00`;
         grandtotalElement.innerHTML = `<span>GRAND TOTAL</span> $0.00`;
