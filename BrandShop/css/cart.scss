@@ -149,11 +149,16 @@
         border: 1px solid rgba(164, 164, 164, 1);
         cursor: pointer;
 
-
         &:hover {
-            background-color: $brandColor;
+            background-color: darken($brandColor, 10%);
             color: white;
         }
+
+        &:active {
+            background-color: lighten($brandColor, 10%);
+            transform: scale(0.95);
+        }
+
     }
 
     &__checkout {

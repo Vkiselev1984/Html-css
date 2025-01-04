@@ -120,8 +120,12 @@
   cursor: pointer;
 }
 .cart__button:hover {
-  background-color: #f16d7f;
+  background-color: #ed3e56;
   color: white;
+}
+.cart__button:active {
+  background-color: #f59ca8;
+  transform: scale(0.95);
 }
 .cart__checkout {
   margin-top: 45px;
