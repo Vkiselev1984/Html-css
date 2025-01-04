@@ -116,4 +116,56 @@
     .filters__container {
         height: auto;
     }
+
+    .cart__container {
+        grid-template-columns: 1fr;
+    }
+
+    .cart__form {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+
+    .cart__content ul li {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .cart__content ul li img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .cart__item>span {
+        padding-left: 20px;
+    }
+
+    .cart__content-buttons {
+        width: 100%;
+    }
+
+    .cart__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .cart__form>form {
+        width: 60%;
+    }
+
+    .cart__checkout {
+        margin-left: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+        flex: 1;
+    }
+
 }

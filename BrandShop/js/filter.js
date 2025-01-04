@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "trend": "Color",
             "size": "M",
             "price": "21.00",
-            "title": "AtributikClub",
+            "title": "AtributikClub № 1",
             "description": "Your fingers will shine in rings from the designers of the brand shop",
             "image": "img/accessories_2.jpg"
         },
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "trend": "Form",
             "size": "XS",
             "price": "24.00",
-            "title": "AtributikClub",
+            "title": "AtributikClub № 2",
             "description": "The trend of the current year in amazing ring shapes from the brand shop to surprise and inspire",
             "image": "img/accessories_5.jpg"
         },
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "trend": "Materials",
             "size": "L",
             "price": "23.00",
-            "title": "AtributikClub",
+            "title": "AtributikClub № 3",
             "description": "To make rings, brand shop masters use only modern technologies and materials from the best suppliers",
             "image": "img/accessories_3.jpg"
         },
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Product display function
     const renderProducts = (filteredProducts) => {
-        productContainer.innerHTML = ''; // Сontainer сleaning
+        productContainer.innerHTML = ''; // Очистка контейнера
         const totalProducts = filteredProducts.length;
         const totalPages = Math.ceil(totalProducts / itemsPerPage);
         const startIndex = (currentPage - 1) * itemsPerPage;
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (productsToDisplay.length === 0) {
             const noProductsMessage = document.createElement('div');
             noProductsMessage.className = 'no_products_message';
-            noProductsMessage.textContent = 'Sorry, we can\'t offer products from the selected category at the moment.';
+            noProductsMessage.textContent = 'Извините, в данный момент мы не можем предложить продукты из выбранной категории.';
             productContainer.appendChild(noProductsMessage);
         } else {
             productsToDisplay.forEach(product => {
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 listItem.innerHTML = `
                     <div class="product__image-wrapper">
                         <img class="product__image" src="${product.image}" alt="">
-                        <button class="product__add">Add to Cart</button>
+                        <button class="product__add" data-title="${product.title}" data-price="${product.price}" data-image="${product.image}">Добавить в корзину</button>
                     </div>
                     <div class="product__content">
                         <h3 class="product__title">${product.title}</h3>
@@ -175,6 +175,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         renderPagination(totalPages);
     };
+
+
 
     // Function for display pagination
     const renderPagination = (totalPages) => {

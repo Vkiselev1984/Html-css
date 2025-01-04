@@ -85,4 +85,8 @@
     .filters__single-details>.filters__details>a {
         content: '';
     }
+
+    .cart__container {
+        flex-direction: column;
+    }
 }

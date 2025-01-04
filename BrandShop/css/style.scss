@@ -95,15 +95,37 @@ ul {
         width: 80px;
     }
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
-    }
-
     .nav {
         display: flex;
         align-items: center;
         gap: 33px;
+
+        &__link--cart {
+            color: white;
+            text-decoration: none;
+            position: relative;
+
+            &:hover {
+                color: $brandColor;
+            }
+
+            .cart__badge {
+                width: 20px;
+                height: 20px;
+                background-color: $brandColor;
+                border-radius: 10px;
+                position: absolute;
+                bottom: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .cart__count {
+                color: white;
+                font-size: 10px;
+            }
+        }
     }
 
     // Search bar
@@ -128,7 +150,6 @@ ul {
             padding: 0px;
             box-sizing: border-box;
         }
-
 
         .search-container {
             position: relative;
@@ -236,13 +257,68 @@ ul {
             font-size: 24px;
             cursor: pointer;
         }
-
     }
-
-
 }
 
+.popup {
+    display: none; // Initially hidden
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // Semi-transparent background
+    z-index: 10; // Ensure it appears above other content
 
+    &-content {
+        position: absolute;
+        right: 0;
+        width: 400px;
+        background: white; // Changed to white for better contrast
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px; // Rounded corners
+    }
+
+    .close {
+        cursor: pointer;
+        font-size: 24px;
+        color: $brandColor; // Use brand color for consistency
+        float: right; // Position close button to the right
+    }
+
+    #cart-items {
+        list-style: none; // Remove default list styling
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px; // Space between image and text
+            }
+
+            span {
+                margin-right: 10px; // Space between item name and price
+            }
+        }
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: $brandColor; // Use brand color for button
+        color: white;
+        text-decoration: none;
+        border-radius: 5px; // Rounded corners for button
+        text-align: center;
+    }
+}
 
 .center {
     padding-top: 80px;
@@ -982,4 +1058,8 @@ ul {
 
 .checkmark i {
     display: none;
+}
+
+.cart {
+    min-height: 100vh;
 }

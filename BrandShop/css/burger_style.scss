@@ -1,21 +1,23 @@
 summary {
     display: block;
-    }
-    summary::-webkit-details-marker {
+}
+
+summary::-webkit-details-marker {
     display: none;
-    }
-    summary::before {
+}
+
+summary::before {
     content: '\02C5';
     padding-right: 0.5em;
-    }
-    details[open]>summary::before {
-    content: '\02C3';
-    }
+}
 
-    
-        .nav__link {
-        color: white;
-        font-family: sans-serif;
-        text-decoration: none;
-        }
-        
+details[open]>summary::before {
+    content: '\02C3';
+}
+
+
+.nav__link {
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+}

@@ -100,5 +100,22 @@
         height: auto;
     }
 
+    .cart__container {
+        grid-template-columns: 1fr;
+    }
 
+    .cart__form {
+        margin-top: 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cart__form>form {
+        width: 100%;
+    }
+
+    .cart__checkout {
+        margin-left: 0px;
+        width: 100%;
+    }
 }
