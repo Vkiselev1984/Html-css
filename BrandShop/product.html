@@ -137,6 +137,7 @@
         </div>
     </header>
 
+
     <main class="center">
         <!-- Pop-up Modal for Authentication -->
         <div id="auth-popup" class="popup">
@@ -169,72 +170,18 @@
         </div>
         <section class="banner">
             <div class="container banner__container">
-                <h2 class="banner__container-heading">SHOPPING CART</h2>
-
-            </div>
-        </section>
-        <section class="cart">
-            <div class="container cart__container">
-                <div class="cart__content">
-                    <ul class="cart__content-item" id="cart-list">
+                <h2 class="banner__container-heading">NEW ARRIVALS</h2>
+                <div class="banner__container-breadcrumbs">
+                    <ul class="banner__breadcrumbs-list">
+                        <li class="banner__breadcrumbs-item">
+                            <a href="index.html" class="banner__breadcrumbs-link">Home</a>
+                        </li>
+                        <li><a href="#" class="banner__breadcrumbs-link--active">NEW ARRIVALS</a></li>
                     </ul>
-                    <div class="cart__content-buttons">
-                        <button class="cart__button">Clear shopping
-                            cart</button>
-                        <button class="cart__button">Continue shopping</button>
-                    </div>
-                </div>
-                <div class="cart__form">
-                    <form>
-                        <h3>SHIPPING ADRESS</h3>
-                        <div class="form-group">
-                            <input type="text" id="city" name="city" placeholder="Сity" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="state" name="state" placeholder="State" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="zip-code" name="zip-code" placeholder="Zip-code" required>
-                        </div>
-                        <div class="cart__form-button">
-                            <button class="cart__button">GET A QUOTE</button>
-                        </div>
-                    </form>
-
-                    <div class="cart__checkout">
-                        <p class="cart__checkout-subtotal"><span>SUB TOTAL</span>$900</p>
-                        <p class="cart__checkout-grandtotal"><span>GRAND TOTAL</span>$900</p>
-                        <hr class="cart__divider">
-                        <button class="cart__checkout-button" onclick="checkout()">PROCEED TO CHECKOUT</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="subscribe">
-            <div class="subscribe__container container">
-                <blockquote class="subscribe__review" itemscope itemtype="https://schema.org/Review">
-                    <img src="img/review.jpg" alt="Описание изображения" class="subscribe__image" itemprop="image">
-                    <p class="subscribe__text" itemprop="reviewBody">
-                        “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
-                        purus condimentum“
-                    </p>
-                </blockquote>
-
-                <div class="subscribe__content">
-                    <h2 class="subscribe__title">SUBSCRIBE</h2>
-                    <p class="subscribe__description">
-                        FOR OUR NEWLETTER AND PROMOTION
-                    </p>
-
-                    <form class="subscribe__form">
-                        <input type="text" class="subscribe__input" placeholder="Enter Your Email" required>
-                        <button class="subscribe__button">Subscribe</button>
-                    </form>
                 </div>
             </div>
         </section>
     </main>
-
     <footer class="footer">
         <div class="container footer__container">
             <p class="footer__copyright">© 2022 Brand All Rights Reserved.</p>
@@ -279,11 +226,10 @@
             </ul>
         </div>
     </footer>
-    <script src="js/cart.js"></script>
-    <script src="js/cart-popup.js"></script>
     <script src="js/submenu.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/cart-popup.js"></script>
     <script src="js/authorization.js"></script>
 </body>
 
